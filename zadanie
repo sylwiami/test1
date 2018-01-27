@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std; 
+int main()
+{
+int i,j;
+string wyraz;
+int wynik=1;
+ 
+//cout << "Podaj wyraz: ";
+cin >> wyraz;
+// i - pokazuje na kolejne litery wyrazu począwszy od początku, j - zaczyna od końca
+// funkcja length() zwraca długość
+for (i = 0, j = wyraz.length()-1; i < j; i++, j--)
+{
+if (wyraz[i] != wyraz[j]){
+wynik=0;
+break;
+}
+
+}
+if (wynik == 1)
+cout << "tak" << endl;
+else
+cout << "nie" << endl;
+ 
+return 0;
+}
